@@ -13,17 +13,17 @@ function Logo() {
 
     const devicesArray = [
         {
-            value: <LogoDesktop/>,
+            value: <LogoDesktop />,
             flag: isDesktop,
             id: 0,
         },
         {
-            value: <LogoTablet/>,
+            value: <LogoTablet />,
             flag: isTablet,
             id: 1,
         },
         {
-            value: <LogoMobile/>,
+            value: <LogoMobile />,
             flag: isMobile,
             id: 3,
         }]
