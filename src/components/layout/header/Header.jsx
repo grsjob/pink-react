@@ -1,15 +1,19 @@
 import React, {useContext} from 'react';
 import PropTypes from 'prop-types';
 import {StyledSectionHeader} from "./styles";
-import HeaderTitle from "/src/components/blocks/header-title/header-title"
-import {DeviceContext} from "../../../context/device-context/device-context";
+import useCurrentDevice from "../../../hooks/useCurrentDevice";
+import Nav from "../nav/nav";
 
 const Header = (props) => {
-    const devices = useContext(DeviceContext);
+    // useEffect(()=>{
+    //     return () => setOpenPopup(!isOpenPopup) //TODO разобраться с обнулением состояния кнопки и списка
+    // },[isOpenPopup])
+
+    const device = useCurrentDevice('desktop', 'tablet', 'mobile')
 
     return (
-        <StyledSectionHeader as="header">
-            <HeaderTitle />
+        <StyledSectionHeader device={device} as="header">
+            <Nav />
         </StyledSectionHeader>
     );
 };
