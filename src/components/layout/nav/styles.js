@@ -1,6 +1,7 @@
 import styled, {css} from "styled-components";
 import {Ul} from "/src/components/staled/ul/ul";
 import {Li} from "/src/components/staled/li/li";
+import {Wrapper} from "../../staled/wrapper/wrapper";
 
 export const StyledNavUl = styled(Ul)`
   display: flex;
@@ -53,7 +54,8 @@ export const StyledNavWrapper = styled.div`
   right: 0;
   top: 0;
   background-color: rgba(0,0,0,.3);
-  width: 100%;
+  display: block;
+  //width: 100%;
   ${(props) => {
     switch (props.device) {
       case "desktop":
@@ -63,7 +65,6 @@ export const StyledNavWrapper = styled.div`
           flex-direction: row;
           padding: 27px 20px 43px;
           gap: 10px;
-
         `;
       case "tablet":
         return css`
@@ -75,4 +76,11 @@ export const StyledNavWrapper = styled.div`
         `;
     }
   }}
+`
+
+export const NavWrapper = styled(Wrapper)`
+  display: flex;
+  width: 940px;
+  gap: 100px;
+
 `

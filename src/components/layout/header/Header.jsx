@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import {StyledSectionHeader} from "./styles";
 import useCurrentDevice from "../../../hooks/useCurrentDevice";
 import Nav from "../nav/nav";
+import VisuallyHidden from "../../staled/visually-hidden/visually-hidden";
+import StoreWrapper from "../../blocks/store-wrapper/store-wrapper";
 
 const Header = (props) => {
     // useEffect(()=>{
@@ -14,6 +16,10 @@ const Header = (props) => {
     return (
         <StyledSectionHeader device={device} as="header">
             <Nav />
+            <VisuallyHidden as={'h1'}>
+                Приложение Pink
+            </VisuallyHidden>
+            <StoreWrapper />
         </StyledSectionHeader>
     );
 };

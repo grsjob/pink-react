@@ -1,4 +1,6 @@
 import styled, {css} from "styled-components";
+import {Wrapper} from '/src/components/staled/wrapper/wrapper'
+
 
 export const HeaderTitleWrapper = styled.div`
   display: flex;
@@ -10,6 +12,8 @@ export const HeaderTitleWrapper = styled.div`
         case "desktop":
             return css`
               padding: 27px 20px 43px;
+              max-width: 940px;
+              margin: 0 auto;
             `;
       case "tablet":
           return css`
